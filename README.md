@@ -3,8 +3,8 @@
 Cursor plugin that wraps the **existing** Twiniti Loop CRM MCP (Streamable HTTP). It does not rebuild or proxy the MCP server.
 
 - Plugin id: `twiniti-loop`
-- Version: `0.1.1`
-- License: MIT
+- Version: `0.1.2`
+- License: [MIT](LICENSE-MIT) OR [Apache-2.0](LICENSE-APACHE) (your choice). See [LICENSE](LICENSE).
 - Connection guide: [Twiniti-crm `docs/AGENT_CONNECTION.md`](https://github.com/Twiniti-Hub/Twiniti-crm/blob/development/docs/AGENT_CONNECTION.md)
 
 ## Install
@@ -52,3 +52,7 @@ Some non-browser MCP clients receive **Cloudflare error 1010** when calling `loo
 - `loop-mcp` — general Loop MCP usage
 - `loop-contacts` — contact tools
 - `loop-campaigns` — segments and campaign drafts
+
+## License
+
+Available under the [MIT License](LICENSE-MIT) or the [Apache License 2.0](LICENSE-APACHE), at your option (same dual-license model as [Twiniti-crm](https://github.com/Twiniti-Hub/Twiniti-crm)).
