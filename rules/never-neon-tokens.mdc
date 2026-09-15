@@ -1,0 +1,11 @@
+---
+description: Twiniti Loop MCP safety — no Neon, no pasted agent tokens, no campaign send, board/kanban user-only
+alwaysApply: true
+---
+
+Twiniti Loop MCP safety:
+
+- Never connect to Neon PostgreSQL. Use Loop MCP tools only.
+- Never paste `LOOP_AGENT_TOKEN` or `twiniti_agent_…` credentials into chat, PRs, tickets, logs, or commits.
+- Campaign **send** is not an MCP tool. Stop at draft / status (`create_campaign_draft`, `get_campaign_status`).
+- Board / kanban (Contacts/Companies saved views) is **user-only**. Agent credentials have no board-view scopes; use contact create/update/read for record changes.

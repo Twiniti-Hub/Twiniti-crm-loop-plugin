@@ -1,35 +1,54 @@
-# Twiniti Loop (Cursor plugin)
+# Twiniti Loop
 
-Wraps the **existing** Twiniti Loop MCP. It does not rebuild or proxy the server.
+Cursor plugin that wraps the **existing** Twiniti Loop CRM MCP (Streamable HTTP). It does not rebuild or proxy the MCP server.
 
 - Plugin id: `twiniti-loop`
-- MCP: Streamable HTTP (no stdio)
-- Connection guide (Twiniti-crm): https://github.com/Twiniti-Hub/Twiniti-crm/blob/development/docs/AGENT_CONNECTION.md
+- Version: `0.1.1`
+- License: MIT
+- Connection guide: [Twiniti-crm `docs/AGENT_CONNECTION.md`](https://github.com/Twiniti-Hub/Twiniti-crm/blob/development/docs/AGENT_CONNECTION.md)
 
-## Variables
+## Install
 
-Set these in Cursor (Plugins → Configure) or when installing locally. Values are not stored in this repo.
+### Cursor Marketplace (after publish)
+
+Install **Twiniti Loop** from the Cursor Marketplace, then open **Plugins → Configure** and set the variables below.
+
+### Local
+
+1. Clone or copy this repo to `~/.cursor/plugins/local/twiniti-loop`.
+2. Reload Cursor (**Developer: Reload Window**).
+3. Open **Plugins → Configure** (or Customize) for Twiniti Loop and set variables.
+
+## Configure
 
 | Variable | Default | Notes |
 | --- | --- | --- |
-| `LOOP_MCP_URL` | `https://loop.eu.twiniti.ai/mcp` | Also `https://loop.us.twiniti.ai/mcp`, `https://loop.uk.twiniti.ai/mcp`, or `http://localhost:4000/mcp` |
-| `LOOP_AGENT_TOKEN` | (secret) | From the Loop workspace **Agents** page. Shown once. Prefix `twiniti_agent_` |
+| `LOOP_MCP_URL` | `https://loop.eu.twiniti.ai/mcp` | Also `https://loop.us.twiniti.ai/mcp`, `https://loop.uk.twiniti.ai/mcp`, or `http://localhost:4000/mcp` for local API |
+| `LOOP_AGENT_TOKEN` | *(secret)* | Create an agent on the Loop workspace **Agents** page. Token is shown once. Prefix `twiniti_agent_` |
 
 Never commit tokens, Neon URLs, or Hexclave server keys.
 
-## Local test (Cursor)
+## Smoke test
 
-1. Copy or symlink this repo to `~/.cursor/plugins/local/twiniti-loop`.
-2. Reload Cursor (Developer: Reload Window).
-3. Open **Customize** / Plugins → Twiniti Loop. Set `LOOP_MCP_URL` and `LOOP_AGENT_TOKEN`.
-4. Confirm tools such as `search_contacts` appear. Call `tools/list` rather than assuming the catalog.
+1. Confirm MCP tools load (`tools/list`).
+2. Call `list_segments` or `search_contacts` with a short query.
 
-## Grok Bot
+Expected tools include: `search_contacts`, `get_contact`, `create_contact`, `upsert_contact`, `update_contact`, `get_contact_timeline`, `list_segments`, `get_segment`, `estimate_segment_size`, `create_campaign_draft`, `get_campaign_status`.
 
-After this repo is on GitHub, Computer connects Grok Bot with the same URL and token (`AddMcpServer`). Do not connect from this scaffold alone.
+## Known issue (Cloudflare 1010)
 
-## Tools (today)
+Some non-browser MCP clients receive **Cloudflare error 1010** when calling `loop.*.twiniti.ai`. A browser-like `User-Agent` and/or Cloudflare allowlist for the client may be required. Do not change Cloudflare settings without an explicit Twiniti ops yes.
 
-`search_contacts`, `get_contact`, `create_contact`, `upsert_contact`, `update_contact`, `get_contact_timeline`, `list_segments`, `get_segment`, `estimate_segment_size`, `create_campaign_draft`, `get_campaign_status`.
+## Safety
 
-Not in MCP: campaign send; board/kanban (user-only).
+- Prefer Loop MCP tools for contacts, segments, and campaign drafts.
+- Never query Neon directly.
+- Never paste agent tokens into chat or tickets.
+- Campaign **send** is not available via MCP yet.
+- Board / kanban is user-only.
+
+## Skills
+
+- `loop-mcp` — general Loop MCP usage
+- `loop-contacts` — contact tools
+- `loop-campaigns` — segments and campaign drafts

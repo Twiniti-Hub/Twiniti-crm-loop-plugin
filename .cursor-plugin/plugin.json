@@ -1,14 +1,22 @@
 {
   "name": "twiniti-loop",
   "displayName": "Twiniti Loop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cursor plugin wrapping Twiniti Loop MCP: contacts, segments, and campaign drafts over Streamable HTTP. Does not rebuild the MCP server.",
   "author": {
     "name": "Twiniti"
   },
   "homepage": "https://loop.eu.twiniti.ai",
   "repository": "https://github.com/Twiniti-Hub/Twiniti-crm-loop-plugin",
-  "keywords": ["twiniti", "loop", "crm", "mcp", "contacts", "segments", "campaigns"],
+  "keywords": [
+    "twiniti",
+    "loop",
+    "crm",
+    "mcp",
+    "contacts",
+    "segments",
+    "campaigns"
+  ],
   "skills": "skills",
   "variables": {
     "type": "object",
@@ -25,6 +33,12 @@
         "description": "Secret. Bearer token from the Loop workspace Agents page (shown once). Prefix twiniti_agent_. Never commit, paste in chat, or put in tickets."
       }
     },
-    "required": ["LOOP_MCP_URL", "LOOP_AGENT_TOKEN"]
-  }
+    "required": [
+      "LOOP_MCP_URL",
+      "LOOP_AGENT_TOKEN"
+    ]
+  },
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "rules": "rules"
 }
