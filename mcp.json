@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "twiniti-loop": {
+      "url": "${LOOP_MCP_URL}",
+      "headers": {
+        "Authorization": "Bearer ${LOOP_AGENT_TOKEN}",
+        "Content-Type": "application/json",
+        "Accept": "application/json, text/event-stream",
+        "MCP-Protocol-Version": "2025-06-18"
+      }
+    }
+  }
+}
