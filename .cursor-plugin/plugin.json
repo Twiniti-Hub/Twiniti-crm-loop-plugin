@@ -1,8 +1,8 @@
 {
   "name": "twiniti-loop",
   "displayName": "Twiniti Loop",
-  "version": "0.1.1",
-  "description": "Cursor plugin wrapping Twiniti Loop MCP: contacts, segments, and campaign drafts over Streamable HTTP. Does not rebuild the MCP server.",
+  "version": "0.1.2",
+  "description": "Connect Cursor to Twiniti Loop, the agent-friendly marketing CRM. Search and update contacts, work segments, and create campaign drafts over Loop\u2019s Streamable HTTP MCP. Bring your regional endpoint and agent token \u2014 no secrets in the repo.",
   "author": {
     "name": "Twiniti"
   },
@@ -38,7 +38,7 @@
       "LOOP_AGENT_TOKEN"
     ]
   },
-  "license": "MIT",
-  "logo": "assets/logo.svg",
+  "license": "MIT OR Apache-2.0",
+  "logo": "assets/logo.png",
   "rules": "rules"
 }
