@@ -1,10 +1,15 @@
 # Twiniti Loop
 
-Cursor plugin that wraps the **existing** Twiniti Loop CRM MCP (Streamable HTTP). It does not rebuild or proxy the MCP server.
+Twiniti Loop is an open-source, agent-friendly marketing CRM: contacts, segments, campaigns, and email — built so AI agents can operate the CRM through MCP.
+
+Cursor plugin for Twiniti Loop — agent CRM over MCP (contacts, segments, campaign drafts).
+
+This plugin wraps the **existing** Twiniti Loop CRM MCP (Streamable HTTP). It does not rebuild or proxy the MCP server.
 
 - Plugin id: `twiniti-loop`
 - Version: `0.1.2`
 - License: [MIT](LICENSE-MIT) OR [Apache-2.0](LICENSE-APACHE) (your choice). See [LICENSE](LICENSE).
+- Docs / product: [https://loop.eu.twiniti.ai](https://loop.eu.twiniti.ai)
 - Connection guide: [Twiniti-crm `docs/AGENT_CONNECTION.md`](https://github.com/Twiniti-Hub/Twiniti-crm/blob/development/docs/AGENT_CONNECTION.md)
 
 ## Install
