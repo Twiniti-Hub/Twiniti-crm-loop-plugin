@@ -2,9 +2,9 @@
 
 Twiniti Loop is an open-source, agent-friendly marketing CRM: contacts, segments, campaigns, and email — built so AI agents can operate the CRM through MCP.
 
-Cursor plugin for Twiniti Loop — agent CRM over MCP (contacts, segments, campaign drafts).
+Grok Bot plugin for Twiniti Loop — agent CRM over MCP (contacts, segments, campaign drafts).
 
-This plugin wraps the **existing** Twiniti Loop CRM MCP (Streamable HTTP). It does not rebuild or proxy the MCP server.
+This plugin wraps the **existing** Twiniti Loop CRM MCP (Streamable HTTP). It does not rebuild or proxy the MCP server. The package uses the `.cursor-plugin` marketplace bundle format that Grok Bot installs.
 
 - Plugin id: `twiniti-loop`
 - Version: `0.1.2`
@@ -14,15 +14,15 @@ This plugin wraps the **existing** Twiniti Loop CRM MCP (Streamable HTTP). It do
 
 ## Install
 
-### Cursor Marketplace (after publish)
+### Grok Bot Marketplace (after publish)
 
-Install **Twiniti Loop** from the Cursor Marketplace, then open **Plugins → Configure** and set the variables below.
+Install **Twiniti Loop** from the Grok Bot marketplace, then open **Plugins** in the sidebar (or **Connect**) and configure the variables below.
 
 ### Local
 
-1. Clone or copy this repo to `~/.cursor/plugins/local/twiniti-loop`.
-2. Reload Cursor (**Developer: Reload Window**).
-3. Open **Plugins → Configure** (or Customize) for Twiniti Loop and set variables.
+1. Clone or copy this repo to your local Grok Bot plugins path (marketplace bundle root with `.cursor-plugin/`).
+2. Reload / reconnect the plugin.
+3. Open **Plugins** (sidebar) or **Connect** and set variables.
 
 ## Configure
 
