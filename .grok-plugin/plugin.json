@@ -18,6 +18,7 @@
     "campaigns"
   ],
   "skills": "skills",
+  "mcpServers": "mcp.json",
   "variables": {
     "type": "object",
     "properties": {
